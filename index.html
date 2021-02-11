@@ -10,7 +10,7 @@
   <body>
 
     <div class="container">
-      <h1></h1>
+      <h1>Reload me</h1>
 
       <div class="dice">
         <p>Player 1</p>
@@ -46,7 +46,11 @@
 
     if (randomNumber1>randomNumber2) {
       document.querySelector("h1").innerHTML="Player 1 wins!";
-    } else {document.querySelector("h1").innerHTML="Player 2 wins!";}
+    } else if (randomNumber1<randomNumber2) {
+      document.querySelector("h1").innerHTML="Player 2 wins!";
+    } else if (randomNumber1===randomNumber2) {
+      document.querySelector("h1").innerHTML="It's a draw!";
+    }
 
     </script>
   </body>
